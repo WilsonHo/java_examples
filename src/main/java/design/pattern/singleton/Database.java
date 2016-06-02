@@ -7,18 +7,10 @@ package design.pattern.singleton;
 public class Database {
     private static final Database INSTANCE = new Database();
 
-    public String getA() {
-        return a;
-    }
-
-    public void setA(String a) {
-        this.a = a;
-    }
-
-    private String a;
+    private String hello;
     private Database(){
-        a = "hello";
-    };
+        this.hello = "hello";
+    }
 
     public static synchronized Database getInstance(){
         return INSTANCE;
@@ -26,7 +18,6 @@ public class Database {
 
     public static void main(String[] args) {
         Database a = Database.getInstance();
-        System.out.println(a.getA());
     }
 }
 
